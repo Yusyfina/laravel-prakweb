@@ -8,6 +8,7 @@ enum ProductStatus: string
     case Inactive = 'inactive';
     case Draft    = 'draft';
 
+    case OutOfStock = 'out_of_stock';
 
     // Label untuk tampil di UI
     public function label(): string
@@ -16,6 +17,7 @@ enum ProductStatus: string
             self::Active   => 'Aktif',
             self::Inactive => 'Nonaktif',
             self::Draft    => 'Draft',
+            self::OutOfStock => 'Stok Habis',
         };
     }
 
@@ -49,7 +51,7 @@ enum ProductStatus: string
     public static function options(): array
     {
         return array_map(
-            fn (self $case) => ['value' => $case->value, 'label' => $case->label()],
+            fn(self $case) => ['value' => $case->value, 'label' => $case->label()],
             self::cases()
         );
     }

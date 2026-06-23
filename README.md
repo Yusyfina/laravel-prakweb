@@ -147,3 +147,36 @@ public function destroy(Category $category): RedirectResponse
 ```
 
 ---
+# Challenge Praktikum Bab 4
+
+## Challenge 1 - Database Schema Toko Lengkap
+
+- Membuat migration tabel `reviews`
+- Membuat migration tabel `coupons`
+- Menambahkan foreign key dan relasi database
+- Menambahkan index untuk optimasi query
+
+## Challenge 2 - Factory & Seeder Realistis
+
+- Membuat `ReviewFactory`
+- Mengatur distribusi rating realistis:
+  - 40% rating 5
+  - 30% rating 4
+  - 20% rating 3
+  - 10% rating 1–2
+- Membuat 300 data review menggunakan seeder
+- Menjaga konsistensi relasi antar tabel
+
+## Challenge 3 - Query Builder Reporting
+
+- Membuat halaman laporan menggunakan Query Builder
+- Menampilkan analisis sentimen rating:
+  - Positif (4–5)
+  - Netral (3)
+  - Negatif (1–2)
+- Menampilkan jumlah kupon aktif
+- Menampilkan jumlah kupon kadaluarsa
+- Menampilkan total penggunaan kupon
+- Memodifikasi dashboard dengan grafik 
+
+---
