@@ -842,7 +842,6 @@
 
         @push('scripts')
 
-            @push('scripts')
                 {{-- CDN Chart.js - CHALLENGE BAB 4 --}}
                 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 
@@ -906,27 +905,6 @@
                     });
                 </script>
 
-                <script>
-                    // ── Period button toggle (KODE LAMA, JANGAN DIHAPUS) ────────────────
-                    document.querySelectorAll('.period-btn').forEach(btn => {
-                        btn.addEventListener('click', function() {
-                            document.querySelectorAll('.period-btn').forEach(b => b.classList.remove('active'));
-                            this.classList.add('active');
-
-                            const period = this.dataset.period;
-                            document.getElementById('periodInput').value = period;
-                            document.getElementById('customRange').style.display =
-                                period === 'custom' ? 'flex' : 'none';
-
-                            if (period !== 'custom') document.getElementById('filterForm').submit();
-                        });
-                    });
-
-                    if (document.getElementById('periodInput').value === 'custom') {
-                        document.getElementById('customRange').style.display = 'flex';
-                    }
-                </script>
-            @endpush
             <script>
                 // ── Period button toggle ───────────────────────────────────────────────────
                 document.querySelectorAll('.period-btn').forEach(btn => {
@@ -950,5 +928,4 @@
                 }
             </script>
         @endpush
-
     @endsection
